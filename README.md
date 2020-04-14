@@ -1,0 +1,2 @@
+# Demo Web Components
+Code created step by step from Maximilian Schwarzmüller Udemy Code: [Web Components & Stencil.js - Build Custom HTML Elements](https://www.udemy.com/course/web-components-stenciljs-build-custom-html-elements/)
