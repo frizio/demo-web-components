@@ -3,9 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Demo Web Components</title>
+  <script src="modal.js"></script>
 </head>
 <body>
+  
   <h2>Demo Web Components with Vanilla Javascript</h2>
+  <ul>
+    <li>No Routing / Navigation</li>
+    <li>No State Management</li>
+    <li>No Form Validation</li>
+  </ul>
+  
+  <uc-modal>
+    <h1 slot="title">The Modal Title</h1>
+    <p>This is our first web component!</p>
+  </uc-modal>
+
+  <script>
+    const modal = document.querySelector('uc-modal');
+    setTimeout(() => {
+      modal.open();
+    }, 3000);
+  </script>
+
 </body>
 </html>
