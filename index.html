@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Demo Web Components</title>
   <script src="tooltip.js"></script>
+  <script src="confirm-link.js"></script>
   <style>
     div {
       border: 1px solid red;
@@ -17,6 +18,12 @@
   <p><lrm-tooltip>Web Components</lrm-tooltip> are awesome!</p>
   <p><lrm-tooltip text="Web component is a set of standards.">Web Components</lrm-tooltip> are reusable!</p>
   <p><lrm-tooltip></lrm-tooltip></p>
-  <div>This not the web component style</div>
+  <div><p>This not the web component style</p></div>
+  <p>
+    <a href="http://www.google.com">Google</a>
+  </p>
+  <p>
+    <a is="lrm-confirm-link" href="http://www.google.com">Google with confirm</a>
+  </p>
 </body>
 </html>
