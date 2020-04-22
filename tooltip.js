@@ -12,6 +12,14 @@ class Tooltip extends HTMLElement {
       { mode: 'open' }
     );
     this.shadowRoot.innerHTML = `
+      <style>
+        div {
+          background-color: green;
+          color: white;
+          position: absolute;
+          zIndex: 10;
+        }
+      </style>
       <slot>Some default text</slot>
       <span> (??)</span>
     `
@@ -32,11 +40,6 @@ class Tooltip extends HTMLElement {
   _showTooltip() {
     this._tooltipContainer = document.createElement('div');
     this._tooltipContainer.textContent = this._tooltipText;
-    
-    this._tooltipContainer.style.backgroundColor = 'green';
-    this._tooltipContainer.style.color = 'white';
-    this._tooltipContainer.style.position = 'absolute'
-    this._tooltipContainer.style.zIndex = 10;
     
     this.shadowRoot.appendChild(this._tooltipContainer);
   }
