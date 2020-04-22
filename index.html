@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Demo Web Components</title>
-  <script src="tooltip.js"></script>
-  <script src="confirm-link.js"></script>
-  <style>
-    div {
-      border: 1px solid red;
-    }
-  </style>
-</head>
-<body>
-  <h2>Demo Web Components with Vanilla Javascript</h2>
-  <p><lrm-tooltip>Web Components</lrm-tooltip> are awesome!</p>
-  <p><lrm-tooltip text="Web component is a set of standards.">Web Components</lrm-tooltip> are reusable!</p>
-  <p><lrm-tooltip></lrm-tooltip></p>
-  <div><p>This not the web component style</p></div>
-  <p>
-    <a href="http://www.google.com">Google</a>
-  </p>
-  <p>
-    <a is="lrm-confirm-link" href="http://www.google.com">Google with confirm</a>
-  </p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="my-button.js"></script>
+    <title>Web Components</title>
+    <style>
+      #info-box {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Show</button>
+    <p id="info-box">More infos!</p>
+
+    <script>
+      const button = document.querySelector('button');
+      const infoEl = document.querySelector('p');
+
+      let isHidden = true;
+
+      button.addEventListener('click', () => {
+        if (isHidden) {
+          infoEl.style.display = 'block';
+          button.textContent = 'Hide';
+          isHidden = false;
+        } else {
+          infoEl.style.display = 'none';
+          button.textContent = 'Show';
+          isHidden = true;
+        }
+      });
+    </script>
+  </body>
 </html>
